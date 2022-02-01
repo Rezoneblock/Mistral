@@ -1,0 +1,135 @@
+.news {
+  padding-bottom: 270px;
+  &__content {
+    width: 100%;
+    @extend %flex-sb;
+    &-column {
+      display: flex;
+      flex-direction: column;
+      article:not(:last-of-type) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 18px 0;
+
+    @include font-styles(1.125, 22, 500, $color-body, 'Stem-Medium');
+    letter-spacing: 0.04em;
+  }
+  &__description {
+    max-width: 419px;
+
+    @include font-styles(0.875, 16, 350, $color-body, 'Stem-SemiLight');
+    letter-spacing: 0.04em;
+  }
+
+  &__link {
+    margin-top: 20px;
+    display: flex;
+    max-width: 217px;
+    max-height: 39px;
+
+    @include font-styles(1.125, 21, 350, $color-body, 'Stem-SemiLight');
+    white-space: nowrap;
+    @include button(20, $color-secondary, none, 9, 28);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .news {
+    &__content {
+      &-column {
+        &:first-of-type,
+        &:last-of-type {
+          width: 20%;
+        }
+        &:nth-child(2) {
+          margin: 0 5px;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .news {
+    &__container {
+      margin-left: 15%;
+      width: 73%;
+      margin: 0 auto;
+    }
+    &__content {
+      justify-content: center;
+      &-column {
+        &:first-of-type,
+        &:last-of-type {
+          width: 30%;
+        }
+        &:nth-child(2) {
+          margin: 0 5px;
+          width: 40%;
+        }
+      }
+    }
+    &__title {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      margin: 10px 0;
+    }
+    &__description {
+      font-size: 0.7rem;
+      line-height: 0.8rem;
+    }
+    &__link {
+      font-size: 0.8rem;
+      max-width: 170px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    &__link {
+      display: flex;
+      justify-content: center;
+      padding: 4px 10px;
+      font-size: 0.6rem;
+    }
+    &__description {
+      max-height: 110px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    &__content {
+      &-column {
+        article:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .news {
+    &__container {
+      width: 100%;
+    }
+    &__title {
+      font-size: 0.5rem;
+      line-height: 0.5rem;
+    }
+    &__description {
+      font-size: 0.5rem;
+      line-height: 0.5rem;
+    }
+    &__link {
+      margin-top: 5px;
+    }
+  }
+}

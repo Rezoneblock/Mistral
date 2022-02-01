@@ -1,0 +1,124 @@
+.side-nav {
+  display: flex;
+  &__list {
+    @include flex-list();
+    justify-content: center;
+  }
+
+  &__item {
+    max-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+
+    @include button(40, $color-secondary, none, 12, 12);
+    box-shadow: 0px 3px 6px rgba($color-body, 0.1);
+
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-right: 18px;
+    }
+
+    &--big {
+      margin-right: 17px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: flex;
+
+    @include font-styles(0.875, 16, 500, $color-body, 'Stem-Regular');
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  &__quantity {
+    position: absolute;
+    top: -21px;
+    right: -14px;
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-light;
+    border: 1px solid $color-body;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .side-nav {
+    &__item:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .side-nav {
+    &__item {
+      min-width: 30px;
+      padding: 8px;
+
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+
+      &--big {
+        min-width: 110px;
+        padding: 0 10px;
+        a {
+          margin-left: 0;
+
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .side-nav {
+    &__item {
+      &--callback {
+        display: none;
+      }
+
+      &--big {
+        min-width: 80px;
+        justify-content: center;
+        a {
+          max-width: 50px;
+
+          white-space: normal;
+          line-height: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .side-nav {
+    &__item {
+      &--mobile {
+        &-close {
+          display: none;
+        }
+        &-open {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}

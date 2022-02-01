@@ -1,0 +1,129 @@
+.nav {
+  max-width: 917px;
+  width: 100%;
+  &__list {
+    @include flex-list(space-between);
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+
+    &--active a {
+      color: $color-primary;
+    }
+    &--big {
+      margin: 0 14px;
+      &::before {
+        left: 14px;
+      }
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      width: 14px;
+      height: 13px;
+
+      background-image: url('../assets/nav-item.svg');
+      background-repeat: no-repeat;
+
+      transition: 0.4s;
+    }
+
+    @media screen and (min-width: 992px) {
+      &:hover::before {
+        transform: translateY(-50%) skew(-3deg) scaleY(2);
+      }
+      &:hover a {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__link {
+    padding-left: 22px;
+
+    @include font-styles(1.25, 25, 700);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transition: 0.4s;
+
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .nav {
+    max-width: 800px;
+    &__item {
+      margin: 0 5px;
+    }
+    &__link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .nav {
+    max-width: 610px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+
+    &__item {
+      margin: 0 5px;
+
+      &::before {
+        left: -5px;
+
+        width: 15px;
+      }
+
+      &:hover::before {
+        transform: translateY(-50%) skew(-3deg) scaleY(1.5);
+      }
+    }
+    &__link {
+      padding-left: 10px;
+
+      font-size: 0.9rem;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    max-width: 500px;
+    &__link {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none;
+    &__item {
+      display: flex;
+
+      padding-left: 20px;
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+    &__link {
+      width: 100%;
+
+      font-size: 1.25rem;
+    }
+  }
+}

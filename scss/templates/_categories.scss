@@ -1,0 +1,27 @@
+.category {
+  &__btn {
+    margin-bottom: 13px;
+
+    @include font-styles(0.875, 17, 400, $color-primary, 'Stem-Regular');
+
+    @include button(37, $color-light, 2px solid $color-primary, 8, 14);
+
+    transition: 0.4s;
+
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-right: 9px;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-light;
+    }
+
+    &--active {
+      background-color: $color-primary;
+      color: $color-light;
+    }
+  }
+}

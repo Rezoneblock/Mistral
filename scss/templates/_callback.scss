@@ -1,0 +1,95 @@
+.callback {
+  padding-top: 63px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+
+  &__photo {
+    position: absolute;
+    left: -77%;
+    bottom: -38%;
+  }
+
+  background-color: $color-secondary;
+
+  &__content {
+    position: relative;
+
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: 292px;
+  }
+  &__title {
+    @include font-styles(1.5, 30, 500, $color-body, 'Stem-Regular');
+    letter-spacing: 0.04em;
+  }
+
+  &__sale {
+    margin-top: 6px;
+    margin-bottom: 30px;
+    display: block;
+
+    @include font-styles(1.5, 30, 400, $color-primary, 'Stem-Regular');
+    letter-spacing: 0.04em;
+    span {
+      font-size: 2.25rem;
+      line-height: 45px;
+      margin-right: 9px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    input {
+      max-width: 420px;
+
+      @include font-styles(1.07, 30, 350, $color-body, 'Stem-SemiLight');
+
+      @include button(0, $color-light, none, 13, 36);
+
+      &::placeholder {
+        @include font-styles(1.07, 30, 350, $color-body, 'Stem-SemiLight');
+      }
+
+      &:first-of-type {
+        margin-bottom: 26px;
+      }
+    }
+    button {
+      margin-top: 32px;
+      max-width: 246px;
+
+      @include font-styles(1.125, 22, 500, $color-light, 'Stem-Regular');
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+
+      @include button(27, $color-primary, none, 16, 44);
+
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .callback {
+    &__photo {
+      z-index: -1;
+      left: 0;
+    }
+    &__content {
+      z-index: 2;
+      margin: 0 auto;
+    }
+    &__form {
+      max-width: 420px;
+      button {
+        margin-left: auto;
+      }
+    }
+    &__sale,
+    &__title {
+      text-shadow: 1px 1px 2px $color-body, 0 0 1em $color-secondary;
+    }
+  }
+}

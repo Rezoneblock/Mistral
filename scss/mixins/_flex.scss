@@ -1,0 +1,8 @@
+@mixin flex-list($jc: none, $fd: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $wrap;
+
+  list-style: none;
+}

@@ -1,0 +1,60 @@
+.header {
+  padding-top: 53px;
+  padding-bottom: 58px;
+
+  &__container {
+    @include flex-list();
+    padding-right: 4px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 20px;
+  }
+
+  &__some {
+    margin: 10px;
+  }
+
+  &__nav {
+    margin-left: 20px;
+  }
+
+  &__side-nav {
+    margin-top: -5px;
+  }
+}
+
+.logo {
+  display: flex;
+}
+
+@media screen and (max-width: 1800px) {
+  .header {
+    &__container {
+      padding-right: 15px;
+    }
+    &__nav {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .logo {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    &__container {
+      padding-right: 10px;
+    }
+  }
+
+  .logo {
+    min-width: 0;
+    margin-right: 15px;
+  }
+}

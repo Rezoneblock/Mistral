@@ -1,0 +1,123 @@
+.contacts {
+  padding-top: 112px;
+  padding-bottom: 134px;
+  &__content {
+    display: flex;
+  }
+  &__info {
+    max-width: 320px;
+    margin-left: 84px;
+    padding: 58px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    margin-bottom: 51px;
+
+    @include font-styles(1.75, 35, 400, $color-body, 'Stem-Regular');
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  &__buttons {
+    margin-bottom: 51px;
+    display: flex;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    @include font-styles(1.125, 22, 500, $color-light, 'Stem-Regular');
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+
+    @include button(50, $color-primary, none);
+
+    cursor: pointer;
+
+    &:not(:first-of-type) {
+      margin-left: 17px;
+    }
+
+    &--big {
+      margin: 0;
+      max-width: 280px;
+      padding: 16px 44px;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contacts {
+    &__info {
+      margin: 0 auto;
+    }
+    &__map {
+      margin: 0 auto;
+      iframe {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contacts {
+    padding-bottom: 20px;
+    &__content {
+      position: relative;
+      flex-direction: column;
+    }
+    &__map {
+      width: 100%;
+      iframe {
+        width: 100%;
+      }
+    }
+    &__info {
+      padding: 10px 0;
+      width: 100%;
+      height: 20%;
+
+      background-color: $color-light;
+    }
+    &__container {
+      width: 65%;
+    }
+    &__link {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 0;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+    &__buttons {
+      display: flex;
+      justify-content: space-beetween;
+      margin: 0 auto;
+    }
+    &__button {
+      display: flex;
+      justify-content: space-beetween;
+      margin: 0 auto;
+      margin-top: 20px;
+      &--big {
+        margin-top: 20px;
+        padding: 16px 34px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contacts {
+    &__container {
+      width: 100%;
+    }
+  }
+}

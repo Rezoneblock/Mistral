@@ -1,0 +1,10 @@
+@mixin button($br, $bgc, $border: none, $pdV: 0, $pdH: 0) {
+  padding-top: #{$pdV}px;
+  padding-bottom: #{$pdV}px;
+  padding-left: #{$pdH}px;
+  padding-right: #{$pdH}px;
+
+  border: $border;
+  border-radius: #{$br}px;
+  background-color: $bgc;
+}

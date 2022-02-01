@@ -1,0 +1,52 @@
+// variables
+@import 'variables';
+
+// extend
+@import 'extend/flex';
+
+// mixins
+@import 'mixins/font-face';
+@import 'mixins/font-styles';
+@import 'mixins/flex';
+@import 'mixins/button';
+
+// settings
+@import 'fonts';
+@import 'settings';
+
+// template: burger menu
+@import 'templates/burger-menu';
+
+// template: header
+@import 'templates/nav';
+@import 'templates/side-nav';
+@import 'templates/header';
+
+// template: catalog
+@import 'templates/filter';
+@import 'templates/catalog';
+@import 'templates/categories';
+
+// template: advantage
+@import 'templates/advantage';
+
+// template: portfolio
+@import 'templates/portfolio';
+
+// template: about-us
+@import 'templates/about-us';
+
+// template: scheme
+@import 'templates/scheme';
+
+// template: news
+@import 'templates/news';
+
+// template: callback
+@import 'templates/callback';
+
+// template: contacts
+@import 'templates/contacts';
+
+// template: footer
+@import 'templates/footer';

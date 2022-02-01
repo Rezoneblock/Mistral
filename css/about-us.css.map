@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,kBAAU,CAAC;EACT,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "../scss/templates/about-us.scss"
+    ],
+    "names": [],
+    "file": "about-us.css"
+}

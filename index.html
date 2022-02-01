@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мистраль</title>
+    <link rel="icon" type="image/svg" href="assets/favicon.svg" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="burger-menu">
+      <div class="container">
+        <div class="burger-menu__btn-close">
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__list burger-menu__nav">
+          <li class="nav__item nav__item--active">
+            <a href="#" class="nav__link">каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">услуги</a>
+          </li>
+          <li class="nav__item nav__item--big">
+            <a href="#" class="nav__link">о компании</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">оплата и доставка</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">контакты</a>
+          </li>
+        </ul>
+
+        <div class="burger-menu__separator"></div>
+
+        <ul class="side-nav__list burger-menu__nav">
+          <li class="side-nav__item side-nav__item--big">
+            <a href="#" class="side-nav__link">Обратный звонок</a>
+          </li>
+          <li class="side-nav__item side-nav__item--mobile-open">
+            <a href="#" class="side-nav__link">
+              <img src="assets/compare.svg" alt="compare" />
+              <span class="side-nav__quantity">2</span>
+            </a>
+          </li>
+          <li class="side-nav__item side-nav__item--mobile-open">
+            <a href="#" class="side-nav__link">
+              <img src="assets/like.svg" alt="saved" />
+            </a>
+          </li>
+          <li class="side-nav__item side-nav__item--mobile-open">
+            <a href="#" class="side-nav__link">
+              <img src="assets/cart.svg" alt="cart" />
+              <span class="side-nav__quantity">4</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="louver"></div>
+
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="logo">
+          <img src="assets/logo.svg" alt="Mistral logo" />
+        </a>
+
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a href="#" class="nav__link">каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">услуги</a>
+            </li>
+            <li class="nav__item nav__item--big">
+              <a href="#" class="nav__link">о компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">оплата и доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="side-nav header__side-nav">
+          <button class="burger-menu__btn-open">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="side-nav__list">
+            <li class="side-nav__item side-nav__item--big side-nav__item--callback">
+              <a href="#" class="side-nav__link">Обратный звонок</a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <img src="assets/search.svg" alt="search" />
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <img src="assets/user.svg" alt="user" />
+              </a>
+            </li>
+            <li class="side-nav__item side-nav__item--mobile-close">
+              <a href="#" class="side-nav__link">
+                <img src="assets/compare.svg" alt="compare" />
+                <span class="side-nav__quantity">2</span>
+              </a>
+            </li>
+            <li class="side-nav__item side-nav__item--mobile-close">
+              <a href="#" class="side-nav__link">
+                <img src="assets/like.svg" alt="saved" />
+              </a>
+            </li>
+            <li class="side-nav__item side-nav__item--mobile-close">
+              <a href="#" class="side-nav__link">
+                <img src="assets/cart.svg" alt="cart" />
+                <span class="side-nav__quantity">4</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="catalog">
+      <div class="container catalog__container">
+        <div class="catalog__filter filter">
+          <div class="filter__block">
+            <span class="filter__title">Выбор по параметрам:</span>
+            <span class="filter__btn-close">
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Цена:</span>
+
+            <div class="filter__range-block">
+              <div class="filter__range-progress"></div>
+              <div class="filter__range-progress-active"></div>
+              <input
+                type="range"
+                min="0"
+                max="154600"
+                value="0"
+                step="any"
+                class="filter__range-input"
+              />
+              <input
+                type="range"
+                min="0"
+                max="154600"
+                value="154600"
+                step="any"
+                class="filter__range-input"
+              />
+            </div>
+
+            <div class="filter__range-value-block">
+              <div class="filter__range-value-from"><span>0</span> ₽</div>
+              <div class="filter__range-value-to"><span>154600</span> ₽</div>
+            </div>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Площадь помещения:</span>
+
+            <div class="filter__range-block">
+              <div class="filter__range-progress"></div>
+              <div class="filter__range-progress-active" style="width: 40%"></div>
+              <input
+                type="range"
+                min="15"
+                max="42"
+                value="15"
+                step="any"
+                class="filter__range-input"
+              />
+              <input
+                type="range"
+                min="15"
+                max="42"
+                value="25.8"
+                step="any"
+                class="filter__range-input"
+              />
+            </div>
+
+            <div class="filter__range-value-block">
+              <div class="filter__range-value-from">
+                <span>15</span> м<sup><small>2</small></sup>
+              </div>
+              <div class="filter__range-value-to">
+                <span>42</span> м<sup><small>2</small></sup>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Производитель:</span>
+
+            <div class="filter__input-wrapper">
+              <input type="text" placeholder="Поиск" class="filter__input" />
+            </div>
+
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input type="checkbox" id="producer1" />
+                <label for="producer1">
+                  <span>
+                    <span class="filter__name">ABASK</span>
+                    (<span class="filter__quantity">4</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer2" />
+                <label for="producer2">
+                  <span>
+                    <span class="filter__name">ALC</span>
+                    (<span class="filter__quantity">2</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer3" />
+                <label for="producer3">
+                  <span>
+                    <span class="filter__name">Aeronic</span>
+                    (<span class="filter__quantity">14</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer4" />
+                <label for="producer4">
+                  <span>
+                    <span class="filter__name">Bosh</span>
+                    (<span class="filter__quantity">4</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer5" />
+                <label for="producer5">
+                  <span>
+                    <span class="filter__name">Candy</span>
+                    (<span class="filter__quantity">7</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer6" />
+                <label for="producer6">
+                  <span>
+                    <span class="filter__name">Centec</span>
+                    (<span class="filter__quantity">11</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer7" />
+                <label for="producer7">
+                  <span>
+                    <span class="filter__name">Candy</span>
+                    (<span class="filter__quantity">7</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer8" />
+                <label for="producer8">
+                  <span>
+                    <span class="filter__name">Centec</span>
+                    (<span class="filter__quantity">11</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer9" />
+                <label for="producer9">
+                  <span>
+                    <span class="filter__name">Aeronic</span>
+                    (<span class="filter__quantity">17</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer10" />
+                <label for="producer10">
+                  <span>
+                    <span class="filter__name">Centec</span>
+                    (<span class="filter__quantity">11</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="producer11" />
+                <label for="producer11">
+                  <span>
+                    <span class="filter__name">ABASK</span>
+                    (<span class="filter__quantity">2</span>)
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Дополнительные опции:</span>
+
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input type="checkbox" id="extra1" />
+                <label for="extra1">
+                  <span>
+                    <span class="filter__name">Ионизация</span>
+                    (<span class="filter__quantity">46</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="extra2" />
+                <label for="extra2">
+                  <span>
+                    <span class="filter__name">Климат контроль</span>
+                    (<span class="filter__quantity">22</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="extra3" />
+                <label for="extra3">
+                  <span>
+                    <span class="filter__name">Турбо</span>
+                    (<span class="filter__quantity">144</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="extra4" />
+                <label for="extra4">
+                  <span>
+                    <span class="filter__name">Эко</span>
+                    (<span class="filter__quantity">4</span>)
+                  </span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <input type="checkbox" id="extra5" />
+                <label for="extra5">
+                  <span>
+                    <span class="filter__name">Wi Fi модуль</span>
+                    (<span class="filter__quantity">70</span>)
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Мощность охлаждения:</span>
+
+            <div class="filter__range-block">
+              <div class="filter__range-progress"></div>
+              <div class="filter__range-progress-active"></div>
+              <input
+                type="range"
+                min="1.5"
+                max="150"
+                value="1.5"
+                step="any"
+                class="filter__range-input"
+              />
+              <input
+                type="range"
+                min="1.5"
+                max="150"
+                value="150"
+                step="any"
+                class="filter__range-input"
+              />
+            </div>
+
+            <div class="filter__range-value-block">
+              <div class="filter__range-value-from"><span>1,5</span> кВт</div>
+              <div class="filter__range-value-to"><span>150</span> кВт</div>
+            </div>
+          </div>
+
+          <div class="filter__block">
+            <span class="filter__title">Уровень шума:</span>
+
+            <div class="filter__range-block">
+              <div class="filter__range-progress"></div>
+              <div class="filter__range-progress-active"></div>
+              <input
+                type="range"
+                min="1"
+                max="150"
+                value="1"
+                step="any"
+                class="filter__range-input"
+              />
+              <input
+                type="range"
+                min="1"
+                max="150"
+                value="150"
+                step="any"
+                class="filter__range-input"
+              />
+            </div>
+
+            <div class="filter__range-value-block">
+              <div class="filter__range-value-from"><span>1</span> dB</div>
+              <div class="filter__range-value-to"><span>150</span> dB</div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__main">
+          <div class="catalog__header">
+            <div class="catalog__conditioner">
+              <span>кондиционеры</span>
+            </div>
+            <div class="catalog__ventilation">
+              <span>системы вентиляции</span>
+            </div>
+          </div>
+
+          <div class="catalog__category category">
+            <button class="category__btn">Кондиционеры</button>
+            <button class="category__btn">Сплит-системы</button>
+            <button class="category__btn">Сплит-системы</button>
+            <button class="category__btn">Вентиляция</button>
+            <button class="category__btn">Инверторные</button>
+            <button class="category__btn">Дизайнерские</button>
+            <button class="category__btn">С Wi Fi</button>
+            <button class="category__btn">Сплит-системы</button>
+            <button class="category__btn">Инверторные</button>
+            <button class="category__btn">С Wi Fi</button>
+            <button class="category__btn">На 2 комнаты</button>
+            <button class="category__btn">На 3 комнаты</button>
+            <button class="category__btn">На 4 комнаты</button>
+            <button class="category__btn">На 5 комнат</button>
+            <button class="category__btn">Для кухни ресторана</button>
+            <button class="category__btn category__btn--active">Для производства</button>
+            <button class="category__btn">Дизайнерские</button>
+            <button class="category__btn">С Wi Fi</button>
+            <button class="category__btn">Сплит-системы</button>
+          </div>
+
+          <div class="catalog__settings">
+            <button class="catalog__settings-filter-btn">Фильтры</button>
+            <div class="catalog__sort sort">
+              <span class="sort__title">Сортировка:</span>
+              <select class="sort__select">
+                <option value="" class="sort__option">По возрастанию цены</option>
+                <option value="" class="sort__option">По убыванию цены</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="catalog__list">
+            <article class="catalog__item">
+              <img src="img/conditioner1.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">19420</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">18240</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner-mini.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Настольный мини-кондиционер Antarctic Air</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">22640</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status">Под заказ</span>
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner2.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">14650</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">14000</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner2.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">14650</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">14000</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner1.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">19420</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">18240</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner-mini.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Настольный мини-кондиционер Antarctic Air</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">22640</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status">Под заказ</span>
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner1.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">19420</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">18240</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner-mini.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Настольный мини-кондиционер Antarctic Air</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">22640</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status">Под заказ</span>
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner2.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">14650</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">14000</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner2.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">14650</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">14000</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner1.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Кондиционер Ballu RC-TVS121-42</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--old">
+                      <span class="info__price-old">19420</span> ₽
+                    </div>
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">18240</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status info__stock-status--success"
+                      >Есть в наличии</span
+                    >
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="catalog__item">
+              <img src="img/conditioner-mini.png" alt="conditioner" class="catalog__item-logo" />
+              <h2 class="catalog__item-title">Настольный мини-кондиционер Antarctic Air</h2>
+              <ul class="catalog__item-info info">
+                <li class="info__line">
+                  <span class="info__title">Инвертор:</span>
+                  <div class="info__line-text"><span class="info__value">Да</span></div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность охлаждения:</span>
+                  <div class="info__line-text"><span class="info__value">2200</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Мощность обогрева:</span>
+                  <div class="info__line-text"><span class="info__value">2640</span> Вт</div>
+                </li>
+                <li class="info__line">
+                  <span class="info__title">Площадь помещения:</span>
+                  <div class="info__line-text">
+                    до <span class="info__value">26</span> м<span class="info__value--m">2</span>
+                  </div>
+                </li>
+                <li class="info__line info__line--big">
+                  <div class="info__price-block">
+                    <div class="info__price-text info__price-text--current">
+                      <span class="info__price-current">22640</span> ₽
+                    </div>
+                  </div>
+
+                  <div class="info__stock-block">
+                    <span class="info__stock-status">Под заказ</span>
+                  </div>
+                </li>
+                <li class="info__line">
+                  <button class="info__btn info__btn--cart">В корзину</button>
+                  <div class="info__user">
+                    <button class="info__btn">
+                      <img src="assets/compare.svg" alt="compare" />
+                    </button>
+                    <button class="info__btn">
+                      <img src="assets/like.svg" alt="compare" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="catalog__search">
+            <input type="text" placeholder="Начните вводить текст" class="catalog__search-input" />
+            <button class="catalog__search-btn">Найти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section advantage">
+      <div class="container section__container">
+        <h2 class="section__title">наши преимущества</h2>
+
+        <div class="advantage__content">
+          <div class="advantage__list">
+            <div class="advantage__item">
+              <span class="advantage__title">Комплексные решения</span>
+            </div>
+            <div class="advantage__item">
+              <span class="advantage__title">Быстрая доставка и монтаж</span>
+            </div>
+            <div class="advantage__item">
+              <span class="advantage__title">Сервисное обслуживание</span>
+            </div>
+          </div>
+
+          <div class="advantage__slider">
+            <div class="advantage__slider-item">
+              <span class="advantage__slider-title">Лучшие серцифицированные специалисты</span>
+              <img src="img/advantages-slider.jpg" alt="Комплексные решения" />
+            </div>
+            <div class="advantage__slider-item">
+              <span class="advantage__slider-title">Лучшие технологии</span>
+              <img src="img/advantages-slider.jpg" alt="Комплексные решения" />
+            </div>
+            <div class="advantage__slider-item">
+              <span class="advantage__slider-title">Лучшие</span>
+              <img src="img/advantages-slider.jpg" alt="Комплексные решения" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio">
+      <div class="container section__container">
+        <div class="portfolio__content">
+          <h2 class="section__title">выполненные работы</h2>
+          <div class="portfolio__slider">
+            <div class="portfolio__item">
+              <img src="img/portfolio-slider.jpg" alt="our work" />
+            </div>
+            <div class="portfolio__item">
+              <img src="img/portfolio-slider.jpg" alt="our work" />
+            </div>
+            <div class="portfolio__item">
+              <img src="img/portfolio-slider.jpg" alt="our work" />
+            </div>
+          </div>
+          <div class="portfolio__slider-nav"></div>
+          <div class="portfolio__slider-arrows"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-us">
+      <div class="container section__container">
+        <div class="about-us__content">
+          <div class="about-us__reviews">
+            <h2 class="section__title">Отзывы</h2>
+            <div class="about-us__reviews-slider">
+              <div class="about-us__reviews-item">
+                <img src="img/review.png" alt="review" />
+              </div>
+              <div class="about-us__reviews-item">
+                <img src="img/review.png" alt="review" />
+              </div>
+              <div class="about-us__reviews-item">
+                <img src="img/review.png" alt="review" />
+              </div>
+            </div>
+            <div class="about-us__reviews-slider-nav"></div>
+          </div>
+
+          <div class="about-us__certificates">
+            <h2 class="section__title">
+              <span class="section__title--hidden">Отзывы и</span> Сертификаты
+            </h2>
+            <div class="about-us__certificates-list">
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+              <img
+                src="img/certificate.jpg"
+                alt="certificate"
+                class="about-us__certificates-item"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scheme">
+      <div class="container section__container scheme__container">
+        <h2 class="section__title">Схема работы</h2>
+        <div class="scheme__content">
+          <div class="scheme__line">
+            <img src="img/dashed-line.svg" alt="line" />
+          </div>
+          <div class="scheme__step">
+            <div class="scheme__step-num">1</div>
+            <div class="scheme__step-value">Описание первого этапа</div>
+          </div>
+          <div class="scheme__step">
+            <div class="scheme__step-num">2</div>
+            <div class="scheme__step-value">Описание второго этапа</div>
+          </div>
+          <div class="scheme__step">
+            <div class="scheme__step-num">3</div>
+            <div class="scheme__step-value">Третий этап</div>
+          </div>
+          <div class="scheme__step">
+            <div class="scheme__step-num">4</div>
+            <div class="scheme__step-value">Описание четвертого этапа</div>
+          </div>
+          <div class="scheme__step">
+            <div class="scheme__step-num">5</div>
+            <div class="scheme__step-value">Пятый этап</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news">
+      <div class="container section__container news__container">
+        <h2 class="section__title">Новости и статьи</h2>
+
+        <div class="news__content">
+          <div class="news__content-column">
+            <article class="news__article">
+              <img src="img/news1.jpg" alt="news1" class="news__img" />
+              <h2 class="news__title">Как настроить работу кондиционера</h2>
+              <p class="news__description">
+                Прежде всего, постоянный количественный рост и сфера нашей активности создаёт
+                предпосылки для позиций, занимаемых участниками в отношении поставленных задач.
+                Учитывая ключевые сценарии поведения, семантический разбор внешних противодействий
+                требует от нас анализа первоочередных требований.
+              </p>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+            <article class="news__article">
+              <img src="img/news2.jpg" alt="news2" class="news__img" />
+              <h2 class="news__title">Новинки в мире кондиционеров</h2>
+              <p class="news__description">
+                Прежде всего, постоянный количественный рост и сфера нашей активности создаёт
+                предпосылки для позиций, занимаемых участниками в отношении поставленных задач.
+              </p>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+          </div>
+          <div class="news__content-column">
+            <article class="news__article">
+              <img src="img/news3.png" alt="news3" class="news__img" />
+              <h2 class="news__title">Вентиляция для частного дома</h2>
+              <p class="news__description">
+                Прежде всего, постоянный количественный рост и сфера нашей активности создаёт
+                предпосылки для позиций, занимаемых участниками в отношении поставленных задач.
+                Учитывая ключевые сценарии поведения, семантический разбор внешних противодействий
+                требует от нас анализа первоочередных требований.
+              </p>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+            <article class="news__article">
+              <img src="img/news4.jpg" alt="news4" class="news__img" />
+              <h2 class="news__title">Новость № 4</h2>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+          </div>
+          <div class="news__content-column">
+            <article class="news__article">
+              <img src="img/news5.jpg" alt="news5" class="news__img" />
+              <h2 class="news__title">Вентиляция для промышленных помещений</h2>
+              <p class="news__description">
+                Прежде всего, постоянный количественный рост и сфера нашей активности создаёт
+                предпосылки для позиций, занимаемых участниками в отношении поставленных задач.
+                Учитывая ключевые сценарии поведения, семантический разбор внешних противодействий
+                требует от нас анализа первоочередных требований.
+              </p>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+            <article class="news__article">
+              <img src="img/news6.jpg" alt="news1" class="news__img" />
+              <h6 class="news__title">Новость № 5</h6>
+              <a href="#" class="news__link">Читать подробнее</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="callback">
+      <div class="container section__container">
+        <div class="callback__content">
+          <div class="callback__photo">
+            <img src="img/callback.png" alt="" />
+          </div>
+          <h2 class="callback__title">Заполните заявку сейчас и получите скидку</h2>
+          <span class="callback__sale"><span>—20%</span> на монтажные работы </span>
+          <form class="callback__form">
+            <input type="text" placeholder="Ваше имя" />
+            <input type="tel" placeholder="Номер телефона" />
+            <button>Получить скидку</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts">
+      <div class="container section__container contacts__container">
+        <h2 class="section__title">Контакты</h2>
+        <div class="contacts__content">
+          <div class="contacts__map">
+            <div style="position: relative; overflow: hidden">
+              <a
+                href="https://yandex.ru/maps/org/mistral/1065948140/?utm_medium=mapframe&utm_source=maps"
+                style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+                >Мистраль</a
+              ><a
+                href="https://yandex.ru/maps/2/saint-petersburg/category/jewelry_wholesale/184105826/?utm_medium=mapframe&utm_source=maps"
+                style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+                >Ювелирные изделия оптом в Санкт‑Петербурге</a
+              ><iframe
+                src="https://yandex.ru/map-widget/v1/-/CCU54FcE1C"
+                width="718"
+                height="553"
+                style="position: relative"
+              ></iframe>
+            </div>
+          </div>
+          <div class="contacts__info">
+            <a href="tel:+78127726242" class="contacts__link">+7 (812) 772-62-42</a>
+            <a href="mailto:info@mistral.ru" class="contacts__link">info@mistral.ru</a>
+            <a href="https://yandex.ru/maps/-/CCU54FWuLA" class="contacts__link"
+              >Санкт-Петербург, ул. Крупской, 55</a
+            >
+            <div class="contacts__buttons">
+              <button class="contacts__button"><img src="assets/vk.svg" alt="vkontakte" /></button>
+              <button class="contacts__button">
+                <img src="assets/facebook.svg" alt="facebook" />
+              </button>
+              <button class="contacts__button">
+                <img src="img/instagram.png" alt="instagram" />
+              </button>
+              <button class="contacts__button">
+                <img src="assets/youtube.svg" alt="youtube" />
+              </button>
+            </div>
+            <button class="contacts__button contacts__button--big">Написать директору</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <small class="footer__copyright">© «Мистраль», 2022</small>
+
+        <div class="footer__links">
+          <a href="#" class="footer__link">Реквизиты компании</a>
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Политика cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
