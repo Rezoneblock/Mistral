@@ -93,4 +93,138 @@ document.addEventListener('DOMContentLoaded', function () {
     nextArrow: '<span></span>',
     appendArrows: $('.about-us__reviews-slider-nav'),
   });
+
+  // range slider's
+
+  // price
+  const slider1 = document.getElementById('rangeFilter1');
+  const slider1Input1 = document.getElementById('rangeFilter1Input1');
+  const slider1Input2 = document.getElementById('rangeFilter1Input2');
+  const inputs1 = [slider1Input1, slider1Input2];
+
+  const setRangeSlider1 = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    slider1.noUiSlider.set(arr);
+  };
+
+  noUiSlider.create(slider1, {
+    start: [0, 154600],
+    connect: true,
+    step: 1,
+    range: {
+      min: 0,
+      max: 154600,
+    },
+  });
+
+  slider1.noUiSlider.on('update', function (values, handle) {
+    inputs1[handle].value = Math.round(values[handle]);
+  });
+
+  inputs1.forEach((el, i) => {
+    el.addEventListener('change', (event) => {
+      setRangeSlider1(i, event.currentTarget.value);
+    });
+  });
+
+  // area
+  const slider2 = document.getElementById('rangeFilter2');
+  const slider2Input1 = document.getElementById('rangeFilter2Input1');
+  const slider2Input2 = document.getElementById('rangeFilter2Input2');
+  const inputs2 = [slider2Input1, slider2Input2];
+
+  const setRangeSlider2 = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    slider2.noUiSlider.set(arr);
+  };
+
+  noUiSlider.create(slider2, {
+    start: [15, 42],
+    connect: true,
+    step: 1,
+    range: {
+      min: 15,
+      max: 90,
+    },
+  });
+
+  slider2.noUiSlider.on('update', function (values, handle) {
+    inputs2[handle].value = Math.round(values[handle]);
+  });
+
+  inputs2.forEach((el, i) => {
+    el.addEventListener('change', (event) => {
+      setRangeSlider2(i, event.currentTarget.value);
+    });
+  });
+
+  // cooling
+  const slider3 = document.getElementById('rangeFilter3');
+  const slider3Input1 = document.getElementById('rangeFilter3Input1');
+  const slider3Input2 = document.getElementById('rangeFilter3Input2');
+  const inputs3 = [slider3Input1, slider3Input2];
+
+  const setRangeSlider3 = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    slider3.noUiSlider.set(arr);
+  };
+
+  noUiSlider.create(slider3, {
+    start: [1.5, 150],
+    connect: true,
+    step: 0.5,
+    range: {
+      min: 1.5,
+      max: 150,
+    },
+  });
+
+  slider3.noUiSlider.on('update', function (values, handle) {
+    inputs3[handle].value = values[handle];
+  });
+
+  inputs3.forEach((el, i) => {
+    el.addEventListener('change', (event) => {
+      setRangeSlider3(i, event.currentTarget.value);
+    });
+  });
+
+  // noise
+  const slider4 = document.getElementById('rangeFilter4');
+  const slider4Input1 = document.getElementById('rangeFilter4Input1');
+  const slider4Input2 = document.getElementById('rangeFilter4Input2');
+  const inputs4 = [slider4Input1, slider4Input2];
+
+  const setRangeSlider4 = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    slider4.noUiSlider.set(arr);
+  };
+
+  noUiSlider.create(slider4, {
+    start: [1, 78],
+    connect: true,
+    step: 1,
+    range: {
+      min: 1,
+      max: 150,
+    },
+  });
+
+  slider4.noUiSlider.on('update', function (values, handle) {
+    inputs4[handle].value = Math.round(values[handle]);
+  });
+
+  inputs4.forEach((el, i) => {
+    el.addEventListener('change', (event) => {
+      setRangeSlider4(i, event.currentTarget.value);
+    });
+  });
 });

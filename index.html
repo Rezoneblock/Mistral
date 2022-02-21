@@ -11,6 +11,7 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -151,64 +152,66 @@
           <div class="filter__block">
             <span class="filter__title">Цена:</span>
 
-            <div class="filter__range-block">
-              <div class="filter__range-progress"></div>
-              <div class="filter__range-progress-active"></div>
-              <input
-                type="range"
-                min="0"
-                max="154600"
-                value="0"
-                step="any"
-                class="filter__range-input"
-              />
-              <input
-                type="range"
-                min="0"
-                max="154600"
-                value="154600"
-                step="any"
-                class="filter__range-input"
-              />
-            </div>
+            <div class="filter__range-block" id="rangeFilter1"></div>
 
-            <div class="filter__range-value-block">
-              <div class="filter__range-value-from"><span>0</span> ₽</div>
-              <div class="filter__range-value-to"><span>154600</span> ₽</div>
+            <div class="filter__range-value">
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="0"
+                  max="154600"
+                  placeholder="0"
+                  class="filter__range-value-input"
+                  id="rangeFilter1Input1"
+                />
+                <span>₽</span>
+              </label>
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="0"
+                  max="154600"
+                  placeholder="154600"
+                  class="filter__range-value-input"
+                  id="rangeFilter1Input2"
+                />
+                <span>₽</span>
+              </label>
             </div>
           </div>
 
           <div class="filter__block">
             <span class="filter__title">Площадь помещения:</span>
 
-            <div class="filter__range-block">
-              <div class="filter__range-progress"></div>
-              <div class="filter__range-progress-active" style="width: 40%"></div>
-              <input
-                type="range"
-                min="15"
-                max="42"
-                value="15"
-                step="any"
-                class="filter__range-input"
-              />
-              <input
-                type="range"
-                min="15"
-                max="42"
-                value="25.8"
-                step="any"
-                class="filter__range-input"
-              />
-            </div>
+            <div class="filter__range-block" id="rangeFilter2"></div>
 
-            <div class="filter__range-value-block">
-              <div class="filter__range-value-from">
-                <span>15</span> м<sup><small>2</small></sup>
-              </div>
-              <div class="filter__range-value-to">
-                <span>42</span> м<sup><small>2</small></sup>
-              </div>
+            <div class="filter__range-value">
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="15"
+                  max="90"
+                  placeholder="15"
+                  class="filter__range-value-input"
+                  id="rangeFilter2Input1"
+                />
+                <span class="small"
+                  >м<sup><small>2</small></sup></span
+                >
+              </label>
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="15"
+                  max="90"
+                  placeholder="42"
+                  class="filter__range-value-input"
+                  id="rangeFilter2Input2"
+                />
+                <span class="small"
+                  >м<sup><small>2</small></sup></span
+                >
+              </label>
             </div>
           </div>
 
@@ -377,37 +380,64 @@
           <div class="filter__block">
             <span class="filter__title">Мощность охлаждения:</span>
 
-            <div class="filter__range-block">
-              <div class="filter__range-progress"></div>
-              <div class="filter__range-progress-active"></div>
-              <input
-                type="range"
-                min="1.5"
-                max="150"
-                value="1.5"
-                step="any"
-                class="filter__range-input"
-              />
-              <input
-                type="range"
-                min="1.5"
-                max="150"
-                value="150"
-                step="any"
-                class="filter__range-input"
-              />
-            </div>
+            <div class="filter__range-block" id="rangeFilter3"></div>
 
-            <div class="filter__range-value-block">
-              <div class="filter__range-value-from"><span>1,5</span> кВт</div>
-              <div class="filter__range-value-to"><span>150</span> кВт</div>
+            <div class="filter__range-value">
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="1.5"
+                  max="150"
+                  placeholder="1.5"
+                  class="filter__range-value-input"
+                  id="rangeFilter3Input1"
+                />
+                <span>кВт</span>
+              </label>
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="1.5"
+                  max="150"
+                  placeholder="150"
+                  class="filter__range-value-input"
+                  id="rangeFilter3Input2"
+                />
+                <span>кВт</span>
+              </label>
             </div>
           </div>
 
           <div class="filter__block">
             <span class="filter__title">Уровень шума:</span>
 
-            <div class="filter__range-block">
+            <div class="filter__range-block" id="rangeFilter4"></div>
+
+            <div class="filter__range-value">
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="1"
+                  max="150"
+                  placeholder="1"
+                  class="filter__range-value-input"
+                  id="rangeFilter4Input1"
+                />
+                <span>dB</span>
+              </label>
+              <label class="filter__range-value-label">
+                <input
+                  type="number"
+                  min="1"
+                  max="150"
+                  placeholder="150"
+                  class="filter__range-value-input"
+                  id="rangeFilter4Input2"
+                />
+                <span>dB</span>
+              </label>
+            </div>
+            <!-- <div class="filter__range-block">
               <div class="filter__range-progress"></div>
               <div class="filter__range-progress-active"></div>
               <input
@@ -431,7 +461,7 @@
             <div class="filter__range-value-block">
               <div class="filter__range-value-from"><span>1</span> dB</div>
               <div class="filter__range-value-to"><span>150</span> dB</div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="catalog__main">
@@ -1380,6 +1410,7 @@
     </footer>
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
